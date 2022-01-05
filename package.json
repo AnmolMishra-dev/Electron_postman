@@ -1,0 +1,65 @@
+{
+  "name": "electron_postman",
+  "version": "1.0.0",
+  "description": "Hello",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "make-64": "electron-forge make --arch=x64",
+    "make-32": "electron-forge make --arch=ia32"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "./images/icon.ico",
+        "arch": [
+          "ia32",
+          "x64"
+        ]
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "authors": "My Demo",
+            "noMsi": true,
+            "outputDirectory": "./Mydemo-Dist-32-Installers"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "win32"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "cli": "^1.0.1",
+    "electron": "^12.0.2",
+    "electron-installer-dmg": "^3.0.0",
+    "electron-installer-windows": "^3.0.0",
+    "electron-packager": "^15.2.0",
+    "electron-winstaller": "^5.0.0"
+  }
+}
