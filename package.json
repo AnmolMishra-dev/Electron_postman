@@ -61,5 +61,13 @@
     "electron-installer-windows": "^3.0.0",
     "electron-packager": "^15.2.0",
     "electron-winstaller": "^5.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tbsdev-Anmol/Electron_postman.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tbsdev-Anmol/Electron_postman/issues"
+  },
+  "homepage": "https://github.com/Tbsdev-Anmol/Electron_postman#readme"
 }

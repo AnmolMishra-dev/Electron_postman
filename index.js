@@ -1,5 +1,19 @@
 console.log('This is my project 6 from JavaScript course');
 
+let get = document.getElementById('get');
+document.getElementById('Content-Type').style.display = 'none';
+document.getElementById('requestJsonBox').style.display = 'none';
+get.addEventListener('click', () => {
+    document.getElementById('Content-Type').style.display = 'none';
+    document.getElementById('requestJsonBox').style.display = 'none';
+  
+})
+let post = document.getElementById('post');
+post.addEventListener('click', () => {
+    document.getElementById('Content-Type').style.display = 'block';
+    document.getElementById('requestJsonBox').style.display = 'block';
+
+})
 // Utility functions:
 // 1. Utility function to get DOM element from string
 function getElementFromString(string) {
@@ -8,8 +22,11 @@ function getElementFromString(string) {
     return div.firstElementChild;
 }
 
+
 // Initialize no of parameters
 let addedParamCount = 0;
+
+
 
 // Hide the parameters box initially
 let parametersBox = document.getElementById('parametersBox');
